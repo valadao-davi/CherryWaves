@@ -1,0 +1,57 @@
+<ng-container *ngIf="albumItem">
+  <div class="layout">
+    <div *ngIf="dataLoaded">
+      <app-left-info [albumId]="albumItem.id" [urlImage]="albumItem.albumImage[0].link" [albumTitle]="albumItem.albumName"></app-left-info>
+    </div>
+
+    <div class="conteudo">
+        <div class="title-song">
+          <h1><span *ngFor="let artist of albumItem.artists; let isLast = last"><button (click)="navigateArtist(artist.id)">{{artist.name}}</button><span *ngIf="!isLast">, </span> </span> - {{ albumItem.albumName }} </h1>
+          <button (click)="saveOrRemoveAlbum(albumItem.id, saved)">
+            <img src="../../../assets/Vector.png" *ngIf="!saved" alt="">
+            <img src="../../../assets/salvado.png" *ngIf="saved" alt="">
+          </button>
+        </div>
+
+        <div class="generos_sec">
+            <h3>Tipo de lançamento: </h3>
+            <div class="generos">
+              <div class="genero"><h4>{{ albumItem.albumType | capitalize}}</h4></div>
+            </div>
+        </div>
+
+        <div class="data_lancamento">
+          <h3>Data de Lançamento: <span>{{ albumItem.releaseDate }}</span></h3>
+      </div>
+
+        <div class="secao_dissays">
+          <div class="secao_dissays_topo">
+            <h1>Dissays do álbum<span> ({{dissaysAlbums?.length}})</span></h1>
+            <div class="linha"></div>
+          </div>
+
+
+          <div class="lista_dissays" *ngFor="let musics of albumItem.tracks">
+            <h1>{{musics.orderTrack}}.  {{musics.name}}</h1>
+            <ng-container *ngIf="hasDissaysForMusic(musics.id); else noDissay">
+              <ng-container *ngFor="let dissay of dissaysAlbums">
+                <app-dissay-item *ngIf="musics.id === dissay.musicId"></app-dissay-item>
+              </ng-container> 
+            </ng-container>
+            <ng-template #noDissay>
+              <h3>Sem dissays para essa música</h3>
+            </ng-template>
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+</ng-container>
+
+
+

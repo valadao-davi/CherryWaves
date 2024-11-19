@@ -1,0 +1,41 @@
+<div id="profile_left">
+  <div id="profile_left-top" *ngIf="user === null">
+    <button (click)="navigatePerfil()"><img class="grey_circle" src="../../../assets/icon_0.png" alt=""></button>
+      <h3>Você ainda não criou uma conta</h3>
+      <h5>Crie uma conta para uma experiência completa do CherryWaves</h5>
+
+  </div>
+
+  <button (click)="navigatePerfil()" id="profile_left-top" *ngIf="user">
+    <img class="grey_circle" *ngIf="user.image === undefined" src="../../../assets/icon_0.png" alt="">
+    <h3>{{user.name}}</h3>
+</button>
+
+  <div id="coluna_salvos">
+      <button (click)="navigatePerfil()" id="item_salvos">
+          <img src="../../../assets/drum.svg">
+          <h4>Beats salvos</h4>
+      </button>
+      <button (click)="navigatePerfil()" id="item_salvos">
+          <img src="../../../assets/mini-piano.svg">
+          <h4>Melodias salvas</h4>
+      </button>
+      <button (click)="navigatePerfil()" id="item_salvos">
+          <img src="../../../assets/lyric.svg">
+          <h4>Letras salvas</h4>
+      </button>
+      <button (click)="navigatePerfil()" id="item_salvos">
+          <img src="../../../assets/song_icon.svg">
+          <h4>Waves salvos</h4>
+      </button>
+  </div>
+
+  <button (click)="navigateCreate()" id="btn_criar_dissay">
+      <img src="./assets/updown.svg">
+      <h5>Envie seus waves</h5>
+  </button >
+  <button (click)="navigateCreate()" id="btn_criar_dissay">
+    <img src="./assets/add_icon.svg">
+    <h6>Adquira seus waves</h6>
+</button >
+</div>

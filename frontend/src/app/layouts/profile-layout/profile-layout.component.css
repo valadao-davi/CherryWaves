@@ -1,0 +1,141 @@
+.layout_perfil {
+  display: flex;
+  gap: 64px;
+  min-height: 91vh;
+  position: relative;
+}
+
+.perfil_left {
+  width: 280px;
+  padding: 0px 48px;
+  background-color: #f2f2f2;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.perfil_left div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0px;
+}
+
+.informacoes {
+  width: 80%;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.img_perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.img_edit {
+  width: 24px;
+  height: 24px;
+}
+
+.agradecimento {
+  color: #FD47BC;
+}
+
+.agradecimento img {
+  width: 24px;
+  height: 24px;
+}
+.slider {
+  display: inline-flex;
+  width: max-content;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.perfil_right {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+  margin-bottom: 64px;
+}
+
+.dissays_perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titulo_slider {
+  display: flex;
+  align-items: center;
+}
+
+.slider_space{
+  width: 100%; /* Ajuste conforme necessário */
+  overflow-x: scroll; /* Permite o scroll horizontal */
+  white-space: nowrap; /* Mantém os slides em uma única linha */
+
+}
+
+.no_slider_space{
+  height: 180px;
+  align-items: center;
+  display: flex;
+  color: #808080;
+  justify-content: center;
+}
+
+.slider {
+  display: inline-flex;
+  width: max-content;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.slider_space{
+  display: flex;
+  gap: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #e0e0e0;
+  position: relative;
+  margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+  height: 8px; /* Altura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor do fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080; /* Cor do polegar ao passar o mouse */
+  border-radius: 6px; /* Cantos arredondados */
+}
+
+
+.sem_itens {
+  color: #808080;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

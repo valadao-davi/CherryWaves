@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 32px;
+    border: 1px solid black;
+    align-items: center;
+    border-radius: 20px;
+    width: 164px;
+    height: 140px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card_icon {
+    width: 24px;
+    height: 24px;
+}
+
+.card_imagem {
+    width: 80px;
+    height: 80px;
+}
+
+.card_text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mais {
+  font-weight: 400;
+}

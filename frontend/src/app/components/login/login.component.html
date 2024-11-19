@@ -1,0 +1,49 @@
+<div id="corpo">
+  <form (ngSubmit)="logar()" [formGroup]="loginForm" #formDir="ngForm">
+  <div id="principal">
+    <div id="conteudo_top">
+      <div id="conteudo_top_principal">
+          <img src="../../../assets/logo_login.svg">
+          <div id="inputs_texto">
+              <div id="inputs_column">
+                  <div id="input_item">
+                      <p>Insira seu email ou nome de usuário</p>
+                      <div id="input_frame">
+                          <input formControlName="userOrEmail" required type="text" placeholder="Email ou usuário" required/>
+                          <img src="../../../assets/cadeado_icon.svg">
+                      </div>
+                  </div>
+                  <div id="input_item">
+                      <p>Senha</p>
+                      <div id="input_frame">
+                          <input formControlName="senha" type="password" placeholder="Insira sua senha" required />
+                          <img src="../../../assets/cadeado_icon.svg">
+                      </div>
+                  </div>
+              </div>
+          </div>
+       </div>
+      <div id="esqueceu_senha"><a href="./cadastro.html" id="text_esqueceu">Esqueci minha senha</a></div>
+    </div>
+
+    <div id="botoes_login">
+      <input type="submit" id="botao_cadastro" value="Login"/>
+      <div id="divisor_ou">
+          <hr> <h5>OU</h5> <hr>
+      </div>
+      <button id="botao_login" (click)="navigateCadastro()">
+          <h4>Cadastre-se</h4>
+      </button>
+    </div>
+
+  </div>
+</form>
+</div>
+
+<div *ngIf="sucesso" class="publish-notification" [ngClass]="{'slide': sucesso}">
+  Logado com sucesso!
+</div>
+
+<div *ngIf="falha" class="cancel-notification" [ngClass]="{'slide': falha}">
+  Login falhou! Tente novamente.
+</div>

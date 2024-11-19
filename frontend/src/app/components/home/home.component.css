@@ -1,0 +1,99 @@
+#home {
+    width: 1200px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 0px;
+    margin: auto;
+}
+
+.titulo_slider{
+    display: flex;
+    gap: 8px;
+}
+
+.titulo_slider img{
+    height: 36px;
+    width: 36px;
+}
+
+#banner{
+    padding: 64px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: min-content;
+    background-color: #c8e4fc;
+    align-items: center;
+    border-radius: 12px;
+}
+
+#banner_text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#banner_text h2 {
+    width: 400px;
+}
+
+#banner_icons {
+    display: flex;
+    gap: 32px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.slider_space{
+  width: 100%; /* Ajuste conforme necessário */
+  overflow-x: scroll; /* Permite o scroll horizontal */
+  white-space: nowrap; /* Mantém os slides em uma única linha */
+
+}
+
+.slider {
+  display: inline-flex;
+  width: max-content;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.slider_space{
+  display: flex;
+  gap: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #e0e0e0;
+  position: relative;
+  margin-top: 10px;
+}
+
+
+.slider-container:active {
+  cursor: grabbing; /* Cursor quando arrastando */
+}
+
+
+::-webkit-scrollbar {
+  height: 8px; /* Altura da barra de rolagem */
+}
+
+/* Estilo do "trilho" da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor do fundo da barra */
+}
+
+/* Estilo do "polegar" ao passar o mouse */
+::-webkit-scrollbar-thumb {
+  background: #808080; /* Cor do polegar ao passar o mouse */
+  border-radius: 6px; /* Cantos arredondados */
+}

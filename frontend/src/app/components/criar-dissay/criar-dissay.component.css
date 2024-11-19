@@ -1,0 +1,252 @@
+.layout {
+    margin: 64px 64px;
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+}
+
+.left_criar {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+}
+
+.seta_voltar {
+    width: 32px;
+    height: 32px;
+}
+
+.criar_dissay {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.criar_dissay h1 {
+    margin-bottom: 32px;
+}
+
+.marcar_dissay {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.marcar_dissay input {
+    height: 16px;
+    width: 16px;
+}
+
+.campo_input img {
+    fill: red;
+}
+
+.light_text {
+    color: black;
+}
+
+.campo_input {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    color: black;
+}
+
+.campo_input input {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.input_icon {
+    width: 24px;
+    height: 24px;
+}
+
+.right_criar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.imagem_album {
+    width: 280px;
+    height: 280px;
+    background-color: #D9D9D9;
+}
+
+.afinacao {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+}
+
+.publicar_dissay {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    border-radius: 100px;
+    width: 100%;
+    padding: 24px 0px;
+    justify-content: center;
+    background-color: #FD47BC;
+    color: white;
+}
+
+.secao_instrumentos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.titulo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    text-align: end;
+}
+
+.linha {
+    width: 100%;
+    height: 1.5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lista_instrumentos_criar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));  /* Adapta os elementos para caberem dentro da tela */
+    gap: 16px;  /* Espaçamento entre os elementos */
+    width: 100%;  /* O grid ocupa 100% da largura disponível */
+    justify-items: center;  /* Centraliza os itens dentro do grid */
+}
+
+.descricao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 24px;
+    margin-top: 16px;
+    flex-direction: column;
+    gap: 8px;
+}
+.texto_editar {
+    display: flex;
+    width: 100%;
+}
+.campo_descricao {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    min-height: 212px;
+    background-color: transparent;
+}
+
+.img_src_album{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input_e_pesquisas {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.input_e_pesquisas .campo_input {
+    background-color: transparent;
+}
+
+.button_pesquisa {
+    width: 100%;
+    padding: 0px;
+
+}
+
+.pesquisas {
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.pesquisa {
+    display: flex;
+    gap: 12px;
+    padding: 8px 16px;
+    width: 100%;
+    align-items: center;
+    font-size: 16px;
+    text-align: start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pesquisa:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Altura da barra de rolagem */
+  }
+  
+  /* Estilo do "trilho" da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Cor do fundo da barra */
+  }
+  
+  /* Estilo do "polegar" ao passar o mouse */
+  ::-webkit-scrollbar-thumb {
+    background: #808080; /* Cor do polegar ao passar o mouse */
+    border-radius: 6px; /* Cantos arredondados */
+  }
+.contagem {
+    align-self: last baseline;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+}
+
+.vermelho {
+    color: red;
+}
+
+.contagem span {
+    font-weight: 500;
+    color: black !important;
+}
+.overlay-container {
+    position: absolute;
+    top: 100%;  /* Isso posiciona o overlay abaixo do input */
+    left: 0;    /* Alinha o overlay ao lado esquerdo do input */
+    width: 100%; /* Ou defina um tamanho fixo conforme necessário */
+    z-index: 9999; /* Garante que o overlay fique acima de outros elementos */
+  }

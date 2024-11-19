@@ -1,0 +1,88 @@
+<div class="layout">
+    <div class="left_criar">
+        <img class="seta_voltar" src="../../../assets/left_arrow_icon.svg">
+        <div class="criar_dissay">
+
+            <h1 *ngIf="!musicSelected">Criar Dissay</h1>
+            <h1 *ngIf="musicSelected">Dissay - {{musicSelected.name}}</h1>
+
+            <div class="campo_input">
+                <input
+                placeholder="Título do Dissay..." 
+                type="text"
+                [(ngModel)]="titleValue"
+                (input)="onInput($event, 'title')" 
+                [attr.maxlength]="maxLengthTitle"
+                >
+                <img class="input_icon" src="../../../assets/edit_icon.svg"/>
+            </div>
+
+            <div *ngIf="charCountTitle >= maxLengthTitle">Limite de caracteres excedido</div>
+
+            <div class="input_e_pesquisas">
+                <div class="campo_input">
+                    <input placeholder="Procure sua música..." type="text" [(ngModel)]="searchQuery" (input)="onSearchChange(searchQuery)">
+                    <img src="../../../assets/lupa_icon_black_80.svg">
+                </div>
+                <div *ngIf="showResults" class="pesquisas">
+                    <button  *ngFor="let track of tracksSearched"class="button_pesquisa" (click)="selectMusic(track.id)">
+                        <div class="pesquisa">
+                            <img [src]="track.albumImages[2].link" alt="https://i.scdn.co/image/ab67616d000048517005885df706891a3c182a57">
+                            <div>{{track.name}} - {{track.artists[0].name}}</div>
+                        </div>
+                    </button>
+            </div>
+            </div>
+            
+
+            
+
+            <div class="marcar_dissay">
+                <input type="checkbox" name="privado" id="privadoId">
+                <p class="light_text">Marcar Dissay como privado</p>
+                <img src="../../../assets/info_icon.svg">
+            </div>
+
+            <div class="secao_instrumentos">
+                <div class="titulo">
+                    <h2>Instrumentos</h2>
+                    <p>Adicione um efeito ou clique em um para editá-lo</p>
+                </div>
+                <div class="linha"></div>
+                <div class="lista_instrumentos_criar" >
+                    <app-criar-dissay-cards *ngFor="let defaults of listDefaultInstruments" [instrumento]="defaults"></app-criar-dissay-cards>
+                    <app-criar-dissay-cards></app-criar-dissay-cards>
+
+                </div>
+                <div class="linha"></div>
+                <div class="descricao campo_input">
+                  <div class="texto_editar">
+                    <textarea #textarea_descricao 
+                    name="descricao" 
+                    class="campo_descricao" 
+                    placeholder="Adicione uma descrição pro seu Dissay (opcional)" 
+                    (input)="adjustHeight(textarea_descricao)" 
+                    (input)="onInput($event, 'description')"
+                    [attr.maxlength]="maxLengthDescription"
+                    rows="5" cols="5"></textarea>
+                    <img class="input_icon" src="../../../assets/edit_icon.svg"/>
+                    </div>
+                  <p class="contagem" [ngClass]="{'vermelho' : charCountDescription >= maxLengthDescription}">{{ maxLengthDescription - charCountDescription }}<span *ngIf="charCountDescription >= maxLengthDescription">Limite de caracteres excedido</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right_criar">
+        <div class="imagem_album">
+            <img class="img_src_album" *ngIf="musicSelected" [src]="musicSelected.albumImages[0].link" alt="">
+        </div>
+        <div class="afinacao">
+            <h1>Inserir afinação</h1>
+            <app-criar-dissay-cards [afinacao]="'Inserir afinação'"></app-criar-dissay-cards>
+        </div>
+        <button class="publicar_dissay">
+            <h3>Publicar Dissay</h3>
+            <img src="../../../assets/enviar_icon.svg"></button>
+    </div>
+</div>
