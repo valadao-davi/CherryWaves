@@ -1,95 +1,161 @@
 #home {
-    width: 1200px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 48px 0px;
-    margin: auto;
+  width: 1200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 0px;
+  margin: auto;
 }
 
-.titulo_slider{
-    display: flex;
-    gap: 8px;
+.banner_zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
-.titulo_slider img{
-    height: 36px;
-    width: 36px;
+.arrow_left {
+  height: 32px;
 }
 
-#banner{
-    padding: 64px;
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    height: min-content;
-    background-color: #c8e4fc;
-    align-items: center;
-    border-radius: 12px;
+.arrow_right {
+  height: 32px;
+  rotate: 180deg;
 }
 
-#banner_text{
+.banner_main {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.banner {
+  background-color: #797979;
+  width: 1200px;
+  height: 240px;
+  border-radius: 12px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border: 1px #797979 solid;
+  border-radius: 100px;
+}
+.selected {
+  background-color: #797979;
+}
+
+.section {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-#banner_text h2 {
-    width: 400px;
+.titulo_slider {
+  font-size: 32px;
+  font-weight: 700;
 }
 
-#banner_icons {
-    display: flex;
-    gap: 32px;
-}
-
-.section {
+.wave {
+  padding: 16px 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
+  border: 2px solid #020202;
+  border-radius: 16px;
+  width: fit-content;
+  min-width: 360px;
+
+  margin-bottom: 16px; /* APAGAR DEPOIS!*/
 }
 
-.slider_space{
-  width: 100%; /* Ajuste conforme necessário */
-  overflow-x: scroll; /* Permite o scroll horizontal */
-  white-space: nowrap; /* Mantém os slides em uma única linha */
-
-}
-
-.slider {
-  display: inline-flex;
-  width: max-content;
-  gap: 16px;
-  margin-bottom: 8px;
-}
-
-.slider_space{
+.topo_wave {
   display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.wave_tipo_img {
+  height: 64px;
+  width: 64px;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #DF0F24;
+}
+
+.categorias {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 20px;
+}
+
+.ponto {
+  height: 4px;
+  width: 4px;
+  border-radius: 100px;
+  background-color: #020202;
+}
+
+.perfil_data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
   gap: 8px;
 }
 
-.progress-bar {
-  width: 100%;
-  height: 4px;
-  background-color: #e0e0e0;
-  position: relative;
-  margin-top: 10px;
+.data {
+  font-size: 16px;
 }
 
-
-.slider-container:active {
-  cursor: grabbing; /* Cursor quando arrastando */
+.perfil img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
 }
 
+.engajamento {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.slider_space {
+  display: flex;
+  gap: 24px;
+  overflow-x: scroll;
+  overflow-y: none;
+  width: 1200px;
+}
 
 ::-webkit-scrollbar {
   height: 8px; /* Altura da barra de rolagem */
+  margin-top: 8px;
+
 }
 
 /* Estilo do "trilho" da barra de rolagem */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; /* Cor do fundo da barra */
+  
 }
 
 /* Estilo do "polegar" ao passar o mouse */
